@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 5, 6, 8, 9, 15, 40, 10, 55];
+
+    function searchIndex(n, arr) {
+        let check = false
+        let index;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === n) {
+                index = i;
+                check = true
+                break;
+            }
+        }
+        if (check === true) {
+            return index
+        } else {
+            return check
+        }
+    }
+
+    console.log(searchIndex(55, array))
+
+    let number = +prompt(" Nhập vào số cần tìm trong mảng")
+
+    function search(n, arr) {
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === n) {
+                check = true;
+                break;
+            }
+        }
+        return check;
+    }
+
+    let result = search(number, array);
+    if (result === true) {
+        console.log("Number " + number + " Có trong mảng");
+    } else {
+        console.log("Number " + number + " Không có trong mảng");
+    }
+</script>
+</body>
+</html>
